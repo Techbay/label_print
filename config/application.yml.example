@@ -1,0 +1,25 @@
+common: &common
+  #stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+  #stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+ 
+development:
+  <<: *common
+  DATABASE: 'label_print'
+  DATABASE_HOST: 'localhost'
+  DATABASE_USERNAME: ''
+  DATABASE_PASSWORD: ''
+
+test:
+  <<: *common
+  DATABASE: 'label_print'
+  DATABASE_HOST: 'localhost'
+  DATABASE_USERNAME: 'techbay'
+  DATABASE_PASSWORD: 'techb@y'
+
+production:
+  <<: *common
+  DATABASE: 'label_print'
+  DATABASE_HOST: '127.0.0.1'
+  DATABASE_PORT: '5432'
+  DATABASE_USERNAME: 'db_deploy'
+  DATABASE_PASSWORD: ''
